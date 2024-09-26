@@ -7,10 +7,11 @@
 class GameWisher {
     public:
         GameWisher();
+        GameWisher(GameWisher&) = delete;
         void newGame();
         std::string checkWord(const std::string& word) const;
     private:
-        const Dictionary m_dict;
+        Dictionary m_dict;
         std::vector<int> m_letters;
         std::string m_word;
         void processWord();

@@ -9,6 +9,7 @@
 class Dictionary {
     public:
         Dictionary();
+        Dictionary(Dictionary&) = delete;
         const int getDictSize() const;
         const std::string getWord(unsigned int index) const;
     private:
