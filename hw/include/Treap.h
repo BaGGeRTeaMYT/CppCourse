@@ -226,7 +226,7 @@ template<class K, class V>
 void Treap<K, V>::erase(const K &key) {
     TreeNode *a, *b, *cur;
     split(m_root, key, a, cur);
-    split(cur, key + 1, cur, b);
+    split(cur, key + char(1), cur, b);
     m_root = merge(a, b);
 }
 

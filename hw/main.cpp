@@ -7,6 +7,7 @@ int main() {
     test.insert("Cucumber", 2);
     test.insert("Bread", 3);
     test.insert("Water", 4);
+    test.erase("Tomato");
     int i = 0;
     for (const auto &[k, v]: test.range("Cucumber", "Water")) {
         std::cout << i++ << ": {";
