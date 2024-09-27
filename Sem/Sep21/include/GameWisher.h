@@ -1,5 +1,5 @@
-// #ifndef GameWisherHEADER
-// #define GameWisherHEADER
+#ifndef GameWisherHEADER
+#define GameWisherHEADER
 
 #include <Dictionary.h>
 #include <random>
@@ -17,4 +17,4 @@ class GameWisher {
         void processWord();
 };
 
-// #endif // GameWisherHEADER
+#endif // GameWisherHEADER

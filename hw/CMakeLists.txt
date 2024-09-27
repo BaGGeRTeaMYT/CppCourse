@@ -6,7 +6,5 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(include/)
 
-add_executable(Run main.cpp
-               src/tree.cc
-               src/node.cc)
+add_executable(Run main.cpp)
 

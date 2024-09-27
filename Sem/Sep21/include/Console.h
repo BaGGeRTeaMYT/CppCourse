@@ -1,5 +1,5 @@
-// #ifndef ConsoleHEADER
-// #define ConsoleHEADER
+#ifndef ConsoleHEADER
+#define ConsoleHEADER
 
 #include <iostream>
 #include <optional>
@@ -19,4 +19,4 @@ class Console {
         void updateFlags();
 };
 
-// #endif // ConsoleHEADER
+#endif // ConsoleHEADER

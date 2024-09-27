@@ -1,14 +1,16 @@
-#include <tree.h>
+#include <Treap.h>
 #include <string>
 
 int main() {
-    auto test = SearchingTree<std::string, int>("test2", 2);
-    test.insert("test1", 1);
-    // std::cout << "Begin: " << (*test.begin()).first << std::endl;
+    Treap<std::string, int> test;
+    test.insert("Tomato", 5);
+    test.insert("Cucumber", 2);
+    test.insert("Bread", 3);
+    test.insert("Water", 4);
     int i = 0;
     for (const auto &[k, v]: test) {
-        std::cout << i++ << ": ";
-        std::cout << k << ' ' << v << std::endl;
+        std::cout << i++ << ": {";
+        std::cout << k << ", " << v << "}" << std::endl;
     }
     return 0;
 }
