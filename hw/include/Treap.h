@@ -100,9 +100,31 @@ public:
     TreeNode* getEnd(TreeNode* t);
 
     using iterator = Iterator<K, V>;
+    Treap range(const K& beginKey, const K& endKey);
+    void createSubTree(const K& beginKey, const K& endKey, Treap& subTree, TreeNode* node);
     iterator begin(); // return begin;
     iterator end();
 };
+
+template<class K, class V>
+void Treap<K, V>::createSubTree(const K& beginKey, const K& endKey, Treap& subTree, TreeNode* node) {
+    if (node->key >= beginKey && node->key < endKey) {
+        subTree.insert(node->key, node->value);
+    }
+    if (node->m_left) {
+        createSubTree(beginKey, endKey, subTree, node->m_left);
+    }
+    if (node->m_right) {
+        createSubTree(beginKey, endKey, subTree, node->m_right);
+    }
+}
+
+template<class K, class V>
+Treap<K, V> Treap<K, V>::range(const K& beginKey, const K& endKey) {
+      Treap<K, V> tmpTree;
+      createSubTree(beginKey, endKey, tmpTree, m_root);
+      return tmpTree;
+}
 
 template<class K, class V>
 Iterator<K, V> Treap<K, V>::begin() {
