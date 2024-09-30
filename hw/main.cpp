@@ -9,7 +9,7 @@ int main() {
     test.insert("Water", 4);
     test.erase("Tomato");
     int i = 0;
-    for (const auto &[k, v]: test.range("Cucumber", "Water")) {
+    for (const auto &[k, v]: test.range("Cucumber", "ZZZ")) {
         std::cout << i++ << ": {";
         std::cout << k << ", " << v << "}" << std::endl;
     }
